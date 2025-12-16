@@ -1,0 +1,12 @@
+services:
+  gemini-auto:
+    build: .
+    container_name: gemini-lab
+    user: "${UID}:${GID}"
+    environment:
+      - GEMINI_API_KEY=${GEMINI_API_KEY}
+    volumes:
+      - ./config:/home/gemini/.gemini
+      - ./data:/home/gemini/data
+    init: true
+    restart: unless-stopped

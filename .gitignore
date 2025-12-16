@@ -1,0 +1,15 @@
+# Environment variables (UID/GID)
+.env
+
+# Secrets and Auth tokens (e.g. login cookies)
+config/*
+!config/.gitkeep
+
+# Automation workspace inputs/outputs
+data/*
+!data/.gitkeep
+
+# System junk
+.DS_Store
+Thumbs.db
+node_modules/
